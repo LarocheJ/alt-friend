@@ -1,0 +1,186 @@
+/**
+ * Alt Friend - Main Stylesheet
+ * Styles for the Alt Friend plugin interface
+ */
+
+:root {
+    --af-primary-color: #df615c;
+    --af-primary-hover: #ee6863;
+    --af-border-color: #ccc;
+    --af-bg-color: #fff;
+    --af-spacing-sm: 8px;
+    --af-spacing-md: 10px;
+    --af-spacing-lg: 20px;
+}
+
+/* Keywords Section */
+.af-keywords-section {
+    margin: 0;
+}
+
+.attachment-details .field input[type=checkbox] {
+    margin: 0;
+    margin-inline-end: 4px;
+}
+
+/* Main Controls Wrapper */
+.af-controls-wrapper {
+    border: 1px solid var(--af-border-color);
+    background-color: var(--af-bg-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.compat-field-af_controls .field {
+    float: left;
+    width: 99.8%;
+}
+
+/* Header */
+.af-controls-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--af-border-color);
+    background: #f7f7f7;
+}
+
+.af-controls-header h3 {
+    margin: 0;
+    padding: var(--af-spacing-md) var(--af-spacing-lg);
+    font-size: 1.125em;
+    font-weight: 600;
+}
+
+/* Body */
+.af-controls-body {
+    padding-inline: var(--af-spacing-lg);
+    padding-block: 15px;
+}
+
+/* Keywords Input */
+.af-keywords-input-wrapper {
+    transition: opacity 0.2s ease-in-out;
+    margin-top: var(--af-spacing-sm);
+}
+
+/* Button */
+.af-button {
+    background-color: var(--af-primary-color);
+    border: none;
+    padding: var(--af-spacing-md) var(--af-spacing-lg);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    margin-block-end: var(--af-spacing-md);
+    font-weight: 500;
+}
+
+.af-button:hover:not(:disabled) {
+    background-color: var(--af-primary-hover);
+}
+
+.af-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.af-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Input Field */
+.af-keywords-input {
+    padding: 6px var(--af-spacing-sm);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    transition: border-color 0.2s ease;
+    font-size: 14px;
+}
+
+.af-keywords-input:focus {
+    border-color: var(--af-primary-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--af-primary-color);
+}
+
+/* Hide default labels */
+.compat-field-af_controls .alignleft:first-child,
+.compat-field-af_controls .label:first-child {
+    display: none;
+}
+
+/* Notes */
+.af-controls-notes {
+    display: block;
+    margin-block-start: var(--af-spacing-md);
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 782px) {
+    .af-controls-body {
+        padding-inline: 15px;
+    }
+    
+    .af-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Bulk Generation Styles */
+#af-bulk-generation-section {
+    margin-top: 20px;
+}
+
+#af-bulk-progress {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+#af-bulk-progress p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+#af-bulk-progress strong {
+    font-weight: 600;
+}
+
+#af-bulk-stats {
+    font-size: 14px;
+}
+
+#af-bulk-stats span {
+    margin-right: 15px;
+}
+
+#af-bulk-log {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+#af-bulk-complete {
+    margin-top: 20px;
+}
+
+#af-bulk-stop {
+    background-color: #dc3232;
+    color: white;
+}
+
+#af-bulk-stop:hover:not(:disabled) {
+    background-color: #c92c2c;
+}
+
+#af-bulk-stop:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
